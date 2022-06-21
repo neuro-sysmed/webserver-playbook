@@ -9,11 +9,12 @@ certbot_auto_renew_hour: "3"
 certbot_auto_renew_minute: "30"
 certbot_auto_renew_options: "--quiet --no-self-upgrade"
 
+certbot_testmode: false
 certbot_certs: []
-  - email: kbr@brugger.dk
-    webroot: "/var/www/"
-    domains:
-      - brainbanker.tinypig.uk
+  #- email: kbr@brugger.dk
+  #  webroot: "/var/www/"
+  #  domains:
+  #    - brainbanker.tinypig.uk
 
 certbot_create_standalone_stop_services:
   - apache2
