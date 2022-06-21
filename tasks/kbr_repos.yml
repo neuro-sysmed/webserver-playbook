@@ -1,0 +1,17 @@
+---
+- name: download and install personal dev repos
+
+  block:
+
+    - name: clone kbr repositories
+      git:
+        repo: git@github-brugger:brugger/{{item}}.git
+        dest: /home/{{user_name}}/projects/kbr/{{item}}
+        force: yes
+      loop:
+        - kbr-dev-utils
+        - kbr-tools
+        - kbr-tools-dbase
+        - kbr-tools-tornado
+        - kbr-utils        
+

@@ -1,0 +1,23 @@
+- hosts: all
+
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars_files:
+    - vars/global.yml
+
+  tasks:
+    - name: add repos
+      include: tasks/repos.yml
+      tags: repos
+
+    - name: install base packages
+      include: tasks/base_packages.yml
+      tags: base_system
+
+    - name: install and configure dev stack
+      include: tasks/dev_stack.yml
+      tags: dev_stack
+
+

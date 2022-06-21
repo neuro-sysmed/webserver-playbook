@@ -1,0 +1,42 @@
+---
+- name: install and configure basic development stack
+
+  block:
+
+    - name: install packages
+      package:
+        name:
+        - postgresql-client
+        - postgresql-12
+        - apache2
+
+    - name: install uuid-ossp extension
+      become: true
+      become_user: postgres
+      command:
+        cmd: psql  -c 'CREATE EXTENSION IF NOT EXISTS "uuid-ossp";'
+
+    - name: install rabbitmq-server packages
+      package:
+        name:
+        - rabbitmq-server
+
+    - name: start rabbitmq
+      service:
+        name: rabbitmq-server
+        state: restarted
+
+    - name: install nodejs & npm
+      package:
+        name:
+        - nodejs
+#        - npm
+
+    - name: update npm
+      command:
+        cmd: npm update npm
+
+
+    - name: install angular
+      command:
+        cmd: npm install -g @angular/cli

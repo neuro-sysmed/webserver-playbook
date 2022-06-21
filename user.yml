@@ -1,0 +1,24 @@
+- hosts: all
+
+  hosts: localhost
+  connection: local
+  become: true
+  become_user: "{{user_name}}"
+
+  vars_files:
+    - vars/global.yml
+
+  tasks:
+
+    - name: home layout
+      include: tasks/home_layout.yml
+      tags: home_layout
+
+    - name: configs files
+      include: tasks/config_files.yml
+      tags: config_files
+
+    - name: kbr_repos
+      include: tasks/kbr_repos.yml
+      tags: kbr_repos
+

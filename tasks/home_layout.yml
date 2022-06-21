@@ -1,0 +1,29 @@
+---
+- name: Homedir layout
+
+  block:
+
+    - name: make default dirs in home
+      ansible.builtin.file:
+        path: "/home/{{user_name}}/{{item}}"
+        state: directory
+        owner: "{{user_name}}"
+      loop:
+        - bin
+        - tmp
+        - projects
+        - projects/kbr/
+        - projects/nsm/
+        - projects/misc/
+        - software
+        - .ssh
+
+
+    - name: make .ssh dirs in home
+      ansible.builtin.file:
+        path: "/home/{{user_name}}/.ssh"
+        state: directory
+        owner: "{{user_name}}"
+        mode: 0700
+
+

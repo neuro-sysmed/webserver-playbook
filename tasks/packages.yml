@@ -1,0 +1,37 @@
+- name: Install and cofigure standard linux vm
+
+  block:
+
+    - name: install packages
+      package:
+        name:
+        - python39
+        - python3-pip
+        - python3.9-venv
+        - git
+        - jq
+        - vim 
+        - libcgroup
+        - libcgroup-tools
+        - singularity
+        - bzip2
+        - apache2
+        - aspell-en
+        - emacs
+       - build-essential
+        - git
+        - java-common
+        - less 
+        - locales
+        - lsof
+#        - memcached
+        - nmap
+        - p7zip
+        - postgresql-13
+#        - rabbitmq-server
+        - sqlite3
+        - curl
+        - wget
+
+        
+        

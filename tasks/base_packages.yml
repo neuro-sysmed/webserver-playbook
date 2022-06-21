@@ -1,0 +1,27 @@
+- name: Install and cofigure standard linux vm packages
+
+  block:
+
+    - name: install base packages
+      package:
+        name:
+        - python3-pip
+        - python3.9-venv
+        - git
+        - jq
+        - vim 
+        - bzip2
+        - aspell-en
+        - emacs
+        - java-common
+        - less 
+        - locales
+        - lsof
+        - iotop
+        - nmap
+        - p7zip
+        - sqlite3
+        - curl
+        - wget
+        
+        
