@@ -13,8 +13,8 @@ certbot_testmode: true
 webroot: "/var/www/"
 certbot_create_if_missing: true
 certbot_certs:
-  domains:
-    - brainbanker.tinypig.uk
+  - domains:
+      - brainbanker.tinypig.uk
 
 certbot_create_standalone_stop_services:
   - apache2
