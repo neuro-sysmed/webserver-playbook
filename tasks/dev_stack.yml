@@ -10,7 +10,7 @@
         - postgresql-13
         - apache2
 
-    - name: install uuid-ossp extension
+    - name: install uuid-ossp extension !!! does not work!
       become: true
       become_user: postgres
       command:

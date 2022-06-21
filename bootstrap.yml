@@ -21,3 +21,6 @@
       tags: dev_stack
 
 
+  roles:
+    - geerlingguy.certbot
+      
