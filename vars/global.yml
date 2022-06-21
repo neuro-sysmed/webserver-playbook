@@ -10,6 +10,11 @@ certbot_auto_renew_minute: "30"
 certbot_auto_renew_options: "--quiet --no-self-upgrade"
 
 certbot_testmode: true
+certbot_admin_email: kbr@brugger.dev
+
+certbot_create_method: standalone
+
+
 webroot: "/var/www/"
 certbot_create_if_missing: true
 certbot_certs:
