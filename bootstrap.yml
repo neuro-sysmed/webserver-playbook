@@ -16,9 +16,9 @@
       include: tasks/base_packages.yml
       tags: base_system
 
-    - name: install and configure dev stack
-      include: tasks/dev_stack.yml
-      tags: dev_stack
+#    - name: install and configure dev stack
+#      include: tasks/dev_stack.yml
+#      tags: dev_stack
 
 
   roles:
