@@ -10,7 +10,7 @@ certbot_auto_renew_minute: "30"
 certbot_auto_renew_options: "--quiet --no-self-upgrade"
 
 certbot_testmode: false
-certbot_certs: []
+certbot_certs:
   webroot: "/var/www/"
   domains:
     - brainbanker.tinypig.uk
